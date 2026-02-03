@@ -136,7 +136,7 @@ const createScene = async function() {
         // Attach the wheel to the cart mesh (parent)
         wheelMesh.parent = cart;
         // Position wheel with respect to centre of cart mesh
-        wheelMesh.position = new BABYLON.Vector3(0, -0.5, 0.5);
+        wheelMesh.position = new BABYLON.Vector3(2, 1, 0.5);
     }).catch((error) => {
         // Oops, the mesh didn't load for some reason
         console.error("Error loading mesh: " + error);
@@ -146,15 +146,15 @@ const createScene = async function() {
         // Do this stuff after the mesh has loaded
         const sunMesh = result.meshes[0];
         // Grab the bouding box
-        const wheelBounds = result.meshes[1];
-        wheelBounds.showBoundingBox = true;
-        // wheelMesh.position = new BABYLON.Vector3(0, 0, 0);
-        wheelMesh.scaling = new BABYLON.Vector3(100, 100, 100);
+        const sunBounds = result.meshes[1];
+        sunBounds.showBoundingBox = true;
+        // sunMesh.position = new BABYLON.Vector3(0, 0, 0);
+        sunMesh.scaling = new BABYLON.Vector3(100, 100, 100);
         // wheelMesh.rotate.y = BABYLON.Tools.ToRadians(90);
         // Attach the wheel to the cart mesh (parent)
-        wheelMesh.parent = cart;
+        sunMesh.parent = cart;
         // Position wheel with respect to centre of cart mesh
-        wheelMesh.position = new BABYLON.Vector3(0, -0.5, 0.5);
+        sunMesh.position = new BABYLON.Vector3(0, 0.5, 0);
     }).catch((error) => {
         // Oops, the mesh didn't load for some reason
         console.error("Error loading mesh: " + error);
