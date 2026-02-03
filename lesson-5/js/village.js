@@ -142,7 +142,7 @@ const createScene = async function() {
         console.error("Error loading mesh: " + error);
         return null;
     });
-        const spear= BABYLON.SceneLoader.ImportMeshAsync("", "./meshes/", "sun.glb").then((result) => {
+        const spear= BABYLON.SceneLoader.ImportMeshAsync("", "./meshes/", "spear.glb").then((result) => {
         // Do this stuff after the mesh has loaded
         const spearMesh = result.meshes[0];
         // Grab the bouding box
