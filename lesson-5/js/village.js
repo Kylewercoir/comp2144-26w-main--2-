@@ -154,7 +154,7 @@ const createScene = async function() {
         // Attach the wheel to the tree mesh (parent)
         spearMesh.parent = tree;
         // Position wheel with respect to centre of cart mesh
-        spearMesh.position = new BABYLON.Vector3(0.5, 0, 0);
+        spearMesh.position = new BABYLON.Vector3(-0.5, 0, 0);
     }).catch((error) => {
         // Oops, the mesh didn't load for some reason
         console.error("Error loading mesh: " + error);
