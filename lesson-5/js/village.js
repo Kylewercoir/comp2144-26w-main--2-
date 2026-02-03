@@ -144,15 +144,13 @@ const createScene = async function() {
     });
     const sun = BABYLON.SceneLoader.ImportMeshAsync("", "./meshes/", "sun.glb").then((result) => {
         // Do this stuff after the mesh has loaded
-        const sunMesh = result.meshes[0];
+        const sunMesh = result.meshes[1];
         // Grab the bouding box
-        const sunBounds = result.meshes[1];
+        const sunBounds = result.meshes[2];
         sunBounds.showBoundingBox = true;
         // sunMesh.position = new BABYLON.Vector3(0, 0, 0);
-        sunMesh.scaling = new BABYLON.Vector3(100, 100, 100);
-        // wheelMesh.rotate.y = BABYLON.Tools.ToRadians(90);
-        // Attach the wheel to the cart mesh (parent)
-        sunMesh.parent = cart;
+        sunMesh.scaling = new BABYLON.Vector3(500, 500, 500);
+         sunMesh.rotate.y = BABYLON.Tools.ToRadians(90);
         // Position wheel with respect to centre of cart mesh
         sunMesh.position = new BABYLON.Vector3(3, -0.5, 3);
     }).catch((error) => {
