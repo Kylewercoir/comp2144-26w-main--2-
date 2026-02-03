@@ -142,17 +142,19 @@ const createScene = async function() {
         console.error("Error loading mesh: " + error);
         return null;
     });
-    const sun = BABYLON.SceneLoader.ImportMeshAsync("", "./meshes/", "sun.glb").then((result) => {
+        const spear= BABYLON.SceneLoader.ImportMeshAsync("", "./meshes/", "spear.glb").then((result) => {
         // Do this stuff after the mesh has loaded
-        const sunMesh = result.meshes[0];
+        const spearMesh = result.meshes[0];
         // Grab the bouding box
-        const sunBounds = result.meshes[1];
-        sunBounds.showBoundingBox = true;
-        sunMesh.position = new BABYLON.Vector3(3, 3, 3);
-        sunMesh.scaling = new BABYLON.Vector3(500, 500, 500);
-        sunMesh.rotate.y = BABYLON.Tools.ToRadians(90);
+        const spearBounds = result.meshes[1];
+        spearBounds.showBoundingBox = true;
+        spearMesh.position = new BABYLON.Vector3(0, 0, 0);
+        spearMesh.scaling = new BABYLON.Vector3(100, 100, 100);
+        // spearMesh.rotate.y = BABYLON.Tools.ToRadians(90);
+        // Attach the wheel to the tree mesh (parent)
+        spearMesh.parent = tree;
         // Position wheel with respect to centre of cart mesh
-       result.meshes[0].position = new BABYLON.Vector3(-2.5, 0.1, -2.5);
+        spearMesh.position = new BABYLON.Vector3(0.5, 0, 0);
     }).catch((error) => {
         // Oops, the mesh didn't load for some reason
         console.error("Error loading mesh: " + error);
