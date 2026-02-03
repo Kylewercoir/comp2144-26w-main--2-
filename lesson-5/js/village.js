@@ -149,7 +149,7 @@ const createScene = async function() {
         const spearBounds = result.meshes[1];
         spearBounds.showBoundingBox = true;
         spearMesh.position = new BABYLON.Vector3(0, 0, 0);
-        spearMesh.scaling = new BABYLON.Vector3(100, 100, 100);
+        spearMesh.scaling = new BABYLON.Vector3(20, 20, 20);
         // spearMesh.rotate.y = BABYLON.Tools.ToRadians(90);
         // Attach the wheel to the tree mesh (parent)
         spearMesh.parent = tree;
