@@ -148,11 +148,11 @@ const createScene = async function() {
         // Grab the bouding box
         const sunBounds = result.meshes[2];
         sunBounds.showBoundingBox = true;
-        // sunMesh.position = new BABYLON.Vector3(0, 0, 0);
+        sunMesh.position = new BABYLON.Vector3(0, 0, 0);
         sunMesh.scaling = new BABYLON.Vector3(500, 500, 500);
-         sunMesh.rotate.y = BABYLON.Tools.ToRadians(90);
+        sunMesh.rotate.y = BABYLON.Tools.ToRadians(90);
         // Position wheel with respect to centre of cart mesh
-        sunMesh.position = new BABYLON.Vector3(3, -0.5, 3);
+        sunMesh.position = new BABYLON.Vector3(3, 0.5, 3);
     }).catch((error) => {
         // Oops, the mesh didn't load for some reason
         console.error("Error loading mesh: " + error);
