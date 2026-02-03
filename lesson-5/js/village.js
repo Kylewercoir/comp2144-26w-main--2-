@@ -152,7 +152,7 @@ const createScene = async function() {
         sunMesh.scaling = new BABYLON.Vector3(500, 500, 500);
         sunMesh.rotate.y = BABYLON.Tools.ToRadians(90);
         // Position wheel with respect to centre of cart mesh
-        sunMesh.position = new BABYLON.Vector3(3, 0.5, 3);
+       result.meshes[0].position = new BABYLON.Vector3(-2.5, 0.1, -2.5);
     }).catch((error) => {
         // Oops, the mesh didn't load for some reason
         console.error("Error loading mesh: " + error);
